@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+    <title>Cadastro</title>
+</head>
+<body>
+    <div>
+        <h1 id="Titulo">Cadastro Aluguel Jogos</h1>
+        <p id="subtitulo">Preencha os dados com as informações</p>
+    </div>
+
+    <form method="POST" action="cadastra_pedido.php">
+
+<fieldset class="grupo">
+<div class="campo">
+<label for="nome"><strong>Nome</strong></label>
+<input type="text" name="nome" id="nome" required>
+</div>
+<div class="campo">
+    <label for="sobrenome"><strong>Sobrenome</strong></label>
+    <input type="text" name="sobrenome" id="sobrenome" required>
+</div>
+</fieldset>
+<div class="campo">
+    <label for="email"><strong>Email</strong></label>
+    <input type="email" name="email" id="email" required>
+</div>
+
+<div class="campo">
+    <label><strong>Status da escolha</strong></label>
+    <label>
+        <input type="radio" name="escolha" value="Alugar" checked>Alugar
+    </label>
+    <label>
+        <input type="radio" name="escolha" value="Comprar">Comprar
+</div>
+
+<fieldset class="grupo">
+    <div id="check">
+        <label><strong>Selecione os jogos que deseja:</strong></label><br>
+        <input type="checkbox" id="jogo" name="jogo" value="Fifa 24">
+        <label for="jogo1">Fifa 24</label>
+        <input type="checkbox" id="jogo" name="jogo" value="God of War">
+        <label for="jogo2">God of War</label>
+        <input type="checkbox" id="jogo" name="jogo" value="Farm Simulator">
+        <label for="jogo3">Farm Simulator</label>
+        <input type="checkbox" id="jogo" name="jogo" value="Call of Duty">
+        <label for="jogo4">Call of Duty</label>
+        <input type="checkbox" id="jogo" name="jogo" value="Forza horizon 5">
+        <label for="jogo5">Forza horizon 5</label><br>
+   
+    </fieldset>
+<div class="campo"><br>
+    <label for="pagamento"><strong>Forma de Pagamento</strong></label>
+    <select name="pagamento" id="pagamento" required>
+        <option selected disabled value="">Selecione</option>
+        <option>Pix</option>
+        <option>Cartão de Crédito</option>
+        <option>Boleto</option>
+    </select>
+</div>
+<div class="campo">
+    <br>
+    <label for="observacoes"><strong>Observações:</strong></label>
+    <textarea name="observacoes" id="observacoes" style="width: 26m" rows="6"></textarea>
+</div>
+<button class="enviar" type="submit" onsubmit="">Enviar</button>
+<button class="limpar" type="submit" onsubmit="">Limpar</button>
+    </form>
+</body>
+</html>
